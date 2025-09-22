@@ -1,0 +1,64 @@
+@import '_mixins';
+@import '_typography';
+@import '_variables';
+
+.page-content {
+    min-height: 100vh;
+
+    .page-header {
+        border-bottom: rem(1) solid var(--border-color);
+        position: sticky;
+        top: 0;
+        background-color: var(--primary-bg-color);
+        z-index: 111;
+
+        .menu-toggle {
+            width: rem(64);
+            height: var(--header-height);
+            background-color: var(--nav-bg);
+            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                font-size: rem(24);
+
+                &.ri-menu-5-line {
+                    opacity: 0;
+                    display: none;
+                }
+            }
+
+        }
+
+        .top-nav {
+            ul {
+                li {
+                    margin-left: rem(30);
+                }
+            }
+        }
+    }
+
+}
+
+body {
+    &.sidebar-hidden {
+        .page-header {
+            .menu-toggle {
+                .ri-menu-line {
+                    opacity: 0;
+                    display: none;
+                }
+
+                .ri-menu-5-line {
+                    display: block;
+                    opacity: 1 !important;
+                }
+            }
+        }
+
+
+    }
+}

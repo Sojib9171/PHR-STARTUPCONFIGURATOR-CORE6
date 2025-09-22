@@ -1,0 +1,20 @@
+INSERT INTO [QADBV9_L2].[HS_HR_IA_WIZARD_QUESTIONS] 
+VALUES
+('7',1,'Please enter the Short Leave Type Code','Text'),
+('7',2,'Please enter the Leave Type Name','Text'),
+('7',3,'Please enter the Minimum hours allowed','Numeric'),
+('7',4,'Please enter the Maximum hours allowed','Numeric'),
+('7',5,'Please enter the Maximum Occurrence','Numeric'),
+('7',6,'Please enter the Maximum consecutive hours allowed per application','Numeric'),
+('7',7,'Should all Leave Types be considered for this Short Leave Type?','Yes/No'),
+('7',8,'Please enter the Maximum No. of Leave allowed per Day','Numeric'),
+('7',9,'Please enter the Leave Time Period in Hours','Numeric'),
+('7',10,'Please enter the Duration per Slot - Beginning of Shift in Hours','Numeric'),
+('7',11,'Please enter the Duration per Slot - End of Shift in Hours','Numeric'),
+('7',12,'Please enter the Maximum Hours Per Month (If applicable for month)','Numeric'),
+('7',13,'Please enter the Maximum Hours Per Year (If applicable for Year)','Numeric'),
+('7',14,'Is this Short Leave Type applicable for weekly?','Yes/No'),
+('7',15,'Does this Short Leave Type require Approval?','Yes/No'),
+('7',16,'Is this Entitlement for All Confirmed Employees?','Yes/No'),
+('7',17,'Is this Entitlement for All Un-Confirmed Employees?','Yes/No'),
+('7',18,'Please enter any Comments','Text');

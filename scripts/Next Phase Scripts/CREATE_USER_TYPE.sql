@@ -1,0 +1,1 @@
+CREATE TYPE IntArrayTableType AS TABLE (ID INT);

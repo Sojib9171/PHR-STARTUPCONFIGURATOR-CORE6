@@ -1,0 +1,1 @@
+INSERT INTO HS_HR_IA_USER_TYPES VALUES ('3', 'User Level Admin');

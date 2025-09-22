@@ -1,0 +1,33 @@
+CREATE OR ALTER PROCEDURE [QADBV9_L2].[SP_IA_CHK_PRV_TWO_COL_NULL]
+@COLUMN_NO INT,
+@ROW_ID INT
+AS
+BEGIN
+
+DECLARE @COLUMN_NAME_1 NVARCHAR(200);
+DECLARE @COLUMN_NAME_2 NVARCHAR(200);
+DECLARE @QUERY NVARCHAR(MAX);
+
+SELECT @COLUMN_NAME_1 = column_name
+FROM (
+  SELECT DISTINCT column_name,ordinal_position
+  FROM information_schema.columns
+  WHERE table_name = 'HS_HR_IA_SHORT_LEAVE_UPLOAD'
+) AS subquery
+WHERE ordinal_position = @COLUMN_NO;
+
+SELECT @COLUMN_NAME_2 = column_name
+FROM (
+  SELECT DISTINCT column_name,ordinal_position
+  FROM information_schema.columns
+  WHERE table_name = 'HS_HR_IA_SHORT_LEAVE_UPLOAD'
+) AS subquery
+WHERE ordinal_position = @COLUMN_NO-1;
+
+SET @QUERY='SELECT 1
+FROM HS_HR_IA_SHORT_LEAVE_UPLOAD
+WHERE Id = '+CAST(@ROW_ID AS NVARCHAR)+' AND ((['+@COLUMN_NAME_1+']) IS NOT NULL OR (['+@COLUMN_NAME_2+']) IS NOT NULL)';
+
+EXEC(@QUERY)
+END
+GO

@@ -1,0 +1,97 @@
+---------------------------------Create Shift-----------------------------
+
+if  EXISTS (select * from sysobjects where [name] ='SP_AI_UPLOAD_SHIFT_INFO')
+drop  PROCEDURE SP_AI_UPLOAD_SHIFT_INFO
+go
+
+CREATE PROCEDURE SP_AI_UPLOAD_SHIFT_INFO
+AS 
+BEGIN
+DECLARE @SFTCodeCal VARCHAR(25)
+DECLARE @SFTDefaultCal VARCHAR(25)
+
+BEGIN TRY  
+--Get SFT code
+SET @SFTCodeCal = RIGHT('000000' + CAST((SELECT ISNULL(MAX(SFT_CODE), 0) FROM HS_TA_SHIFTDEF) AS VARCHAR(25)), 6)
+
+--Get SFT Default value
+SET @SFTDefaultCal = 
+    CASE 
+        WHEN @SFTCodeCal = '000001' THEN 1
+        ELSE 0
+    END;
+
+-- Insert Shift (Basic Shift)
+INSERT INTO [HS_TA_SHIFTDEF]
+           ([SFT_CODE]
+		   ,[SFT_DIS_CODE]
+		   ,[SFT_ABBRV]
+		   ,[SFT_LEAVEAMOUNT]
+		   ,[SFT_NEXT_DAY]
+		   ,[SFT_FLXSHIFT]
+		   ,[SFT_MAX_CNT_SHIFTS]
+		   ,[SFT_CONTINUE]
+		   ,[SFT_ACTIVE]
+		   ,[SFT_OFFSHIFT]
+		   ,[SFT_OT_AUTO_FIX]
+		   ,[SFT_MULSHIFTS]
+		   ,[SFT_SPECIAL]
+		   ,[SFT_COLUR]
+		   ,[SFT_TIMEBASE]
+		   ,[SFT_AUTO_MIDNIGHT]
+		   ,[SFT_DEFAULT]
+		   ,[DBGROUP_ID])
+SELECT RIGHT('000000'+CAST(@SFTCodeCal + ROW_NUMBER() OVER (ORDER BY [ID]) AS varchar(25)),6),
+SG.SHIFT_NAME, SG.SHIFT_ABR, SG.LEAVE_DAYS, SG.NEXT_DAY_SHIFT_OUT_TIME, SG.FLEXI_SHIFT, 0, SG.CONTINUE_SHIFT, 1, SG.OFF_SHIFT,
+0, 0, 0, '', 1, SG.AUTO_MID_NIGHT_FIX, @SFTDefaultCal, NULL
+FROM  HS_HR_IA_SHIFT_INFO_UPLOAD SG
+
+--Insert Sift Segment (Basic Shift Segment)
+INSERT INTO [HS_TA_SHIFTDEF_SEGMENT]
+           ([SFT_CODE]
+		   ,[SEG_NAME]
+		   ,[SEG_SEQUENCE]
+		   ,[SEG_TIMEIN]
+		   ,[SEG_TIMEOUT]
+		   ,[SEG_MIDIN_HRS]
+		   ,[SEG_MIDOUT_HRS]
+		   ,[SEG_ST_CUTHRS]
+		   ,[SEG_ENDOUT_CUTHRS]
+		   ,[SEG_TIMEIN_DAY]
+		   ,[SEG_TIMEOUT_DAY]
+		   ,[SEG_MIN_OT_HRS]
+		   ,[SEG_MAX_OT_HRS]
+		   ,[SEG_SFT_COLOR]
+		   ,[SEG_MIN_POST_OT_HRS]
+		   ,[SEG_MAX_POST_OT_HRS])
+SELECT RIGHT('000000'+CAST(@SFTCodeCal + ROW_NUMBER() OVER (ORDER BY [ID]) AS varchar(25)),6), 
+SG.SHIFT_NAME, 1, SG.START_TIME, SG.END_TIME, SG.FIRST_HALF_DUR, SG.SECOND_HALF_DUR, SG.START_TIME, SG.END_TIME , 1, 1,
+10.0, 0.0, '#3f6b98', 10.0, 0.0
+FROM  HS_HR_IA_SHIFT_INFO_UPLOAD SG
+
+select 'True' as status , 'Successfully added' as message
+END TRY  
+BEGIN CATCH
+	INSERT INTO [HS_HR_IA_ERROR_LOGS]
+			   ([ERROR_LINE]
+			   ,[ERROR_MESSAGE]
+			   ,[ERROR_NUMBER]
+			   ,[ERROR_PROCEDURE]
+			   ,[ERROR_SEVERITY]
+			   ,[ERROR_STATE]
+			   ,[ERROR_DATE])
+	SELECT  
+	ERROR_LINE () as ErrorLine,  
+	Error_Message() as ErrorMessage,  
+	Error_Number() as ErrorNumber,  
+	Error_Procedure() as 'Proc',  
+	Error_Severity() as ErrorSeverity,  
+	Error_State() as ErrorState,  
+	GETDATE () as DateErrorRaised 
+
+	SELECT  
+		'False' as status  
+       ,ERROR_MESSAGE() AS message;  
+END CATCH  
+
+END

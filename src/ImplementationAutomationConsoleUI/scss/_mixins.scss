@@ -1,0 +1,59 @@
+$html-font-size: 16px;
+
+@use 'sass:math';
+
+// px to rem start
+@function stripUnit($value) {
+
+    @return math.div($value, $value * 0 + 1);
+
+}
+
+@function rem($pxValue) {
+
+    @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+
+}
+
+// end
+
+
+
+@mixin transition($for: all, $time-in: 0.5s, $type: ease, $time-out: 0s) {
+    transition: $for $time-in $type $time-out;
+    -moz-transition: $for $time-in $type $time-out;
+    -webkit-transition: $for $time-in $type $time-out;
+    -o-transition: $for $time-in $type $time-out;
+
+}
+
+@mixin ellipse() {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 99.99%;
+}
+
+// @mixin theme-color($light-theme: true) {
+//     @if $light-theme {
+//         background-color: var(--jr-white) !important;
+//         color: var(--jr-primary-color) !important;
+//     }
+
+//     @else {
+//         background-color: var(--jr-dark) !important;
+//         color: var(--jr-primary-color) ip !important;
+//     }
+// }
+
+// @mixin theme-color-card($light-theme: true) {
+//     @if $light-theme {
+//         background-color: var(--jr-card-background) !important;
+//         color: var(--jr-primary-color) !important;
+//     }
+
+//     @else {
+//         background-color: var(--jr-card-background) !important;
+//         color: var(--jr-primary-color) !important;
+//     }
+// }

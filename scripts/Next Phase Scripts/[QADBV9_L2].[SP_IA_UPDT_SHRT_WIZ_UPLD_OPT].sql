@@ -1,0 +1,24 @@
+CREATE OR ALTER PROCEDURE [QADBV9_L2].[SP_IA_UPDT_SHRT_WIZ_UPLD_OPT]
+@ID INT,
+@COLUMN_NO INT,
+@DATA BIT
+AS
+BEGIN
+
+DECLARE @COLUMN_NAME NVARCHAR(200);
+DECLARE @QUERY NVARCHAR(MAX);
+
+SELECT @COLUMN_NAME = column_name
+FROM (
+  SELECT column_name, ROW_NUMBER() OVER (ORDER BY ordinal_position) AS ordinal_position
+  FROM information_schema.columns
+  WHERE table_name = 'HS_HR_IA_SHORT_LEAVE_UPLOAD'
+) AS subquery
+WHERE ordinal_position = @COLUMN_NO;
+
+SET @QUERY='UPDATE [QADBV9_L2].[HS_HR_IA_SHORT_LEAVE_UPLOAD] SET ['+@COLUMN_NAME+'] = '+CAST(@DATA as nvarchar)+' WHERE [ID]='+CAST(@ID as nvarchar)+';'
+
+EXEC(@QUERY)
+
+END
+GO

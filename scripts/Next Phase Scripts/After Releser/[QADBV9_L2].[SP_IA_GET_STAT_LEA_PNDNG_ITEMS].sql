@@ -1,0 +1,54 @@
+CREATE OR ALTER PROCEDURE [QADBV9_L2].[SP_IA_GET_STAT_LEA_PNDNG_ITEMS]
+@PAGE_INDEX INT,
+@PAGE_SIZE INT,
+@SEARCH_TEXT NVARCHAR(MAX),
+@ORDER_BY NVARCHAR(MAX),
+@INT_ARRAY IntArrayTableType READONLY
+AS
+BEGIN
+
+	SET NOCOUNT ON;      
+    DECLARE @SQL NVARCHAR(MAX);      
+    DECLARE @FINAL_QUERY NVARCHAR(MAX);         
+    DECLARE @WHERE_CLS NVARCHAR(MAX);      
+    SET @FINAL_QUERY = N'';         
+    SET @WHERE_CLS = N'';
+
+	IF(@SEARCH_TEXT <> '')      
+    BEGIN       
+        SET @WHERE_CLS = @WHERE_CLS + N'AND LEAVE_TYPE LIKE ''%' + @SEARCH_TEXT + N'%''';      
+    END
+
+    SELECT ID,LEAVE_TYPE into #temp1
+    FROM HS_HR_IA_STATUTRY_LEAVE_UPLOAD
+    WHERE ID IN (SELECT ID FROM @INT_ARRAY);
+
+	SET @FINAL_QUERY=N'
+	DECLARE @TOTAL_COUNT INT;      
+    DECLARE @RECORD_COUNT INT;
+
+	SELECT * INTO #temp2
+	FROM #temp1 WHERE 1=1 '+@WHERE_CLS+';
+
+   	SELECT ID,LEAVE_TYPE into #temp3
+    FROM (
+        SELECT *,
+            ROW_NUMBER() OVER ( ORDER BY ID ) RecordID
+        FROM #temp2 as A)
+		as PagedData
+   WHERE RecordID BETWEEN (('+convert(nvarchar,@PAGE_INDEX)+' - 1) * '+convert(nvarchar,@PAGE_SIZE)+'  + 1)          
+   AND ('  +convert(nvarchar,@PAGE_INDEX)+' * '+convert(nvarchar,@PAGE_SIZE)+');
+   
+	SELECT @TOTAL_COUNT=COUNT(*) FROM #temp1;
+
+	SELECT @RECORD_COUNT=COUNT(*) FROM #temp2;
+
+	SELECT *, @TOTAL_COUNT,@RECORD_COUNT from #temp3;
+	
+	DROP TABLE #temp1;
+	DROP TABLE #temp2;
+	DROP TABLE #temp3;';
+
+	EXEC(@FINAL_QUERY);
+
+END;

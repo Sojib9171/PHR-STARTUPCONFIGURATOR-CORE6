@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SqlServer" id="Project-1c4" database="SqlServer" >
+	<schema name="QADBV9_L2" catalogname="QADBV9_L2" >
+		<table name="HS_DB_UPLOAD_EMPBANK" >
+			<column name="Employee_No" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="Bank_Code" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="Bank_Name" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="Branch_Code" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="Branch_Name" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="Account_No" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="Account_Type" type="numeric" length="4" decimal="0" jt="2" />
+			<column name="Currency_Type" type="varchar" length="10" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+		</table>
+		<table name="HS_DI_UPLOAD_EMPLOYEE" >
+			<column name="EMP_NUMBER" type="varchar" length="8" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TITLE" type="varchar" length="10" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CALLING_NAME" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_SURNAME" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MAIDEN_NAME" type="varchar" length="70" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MIDDLE_INI" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NAMES_BY_INI" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_FULLNAME" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OTHER_NAMES" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_EPF_NUMBER" type="varchar" length="25" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NIC_NO" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NIC_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_BIRTHDAY" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_BIRTHPLACE" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_GENDER" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="NAT_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="RLG_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_BLOOD_GROUP" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MARITAL_STATUS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MARRIED_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_DIVOCE_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="SAL_GRD_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="CT_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="DSG_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="CENTRE_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_DATE_JOINED" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONFIRM_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CONFIRM_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_RESIGN_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_RETIRE_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_WORKHOURS" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="LOC_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TYPE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CONTARCT_START_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONTRACT_END_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONT_TO_PERM_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_BARCODENO" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PAYROLLNO" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="STAFFCAT_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="CAT_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="GP_CODE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ACTIVE_HRM_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ACTIVE_PAYROLL_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ACTIVE_ATT_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_1" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_2" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_3" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_4" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_5" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_6" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TAXONTAX_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TAX_ID_NUMBER" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_EPF_ELIGIBLE_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_EPF_EMPLOYEE_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_EPF_EMPLOYER_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_ETF_ELIGIBLE_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ETF_NUMBER" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ETF_EMPLOYEE_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_ETF_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_MSPS_ELIGIBLE_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MSPS_EMPLOYER_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_MSPS_EMPLOYEE_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_PER_ADDRESS1" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_ADDRESS2" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_ADDRESS3" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_CITY" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_POSTALCODE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_TELEPHONE" type="varchar" length="30" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_MOBILE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_FAX" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_EMAIL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_COU_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_PROVINCE_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_DISTRICT_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_ELECTORATE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ADDRESS1" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ADDRESS2" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ADDRESS3" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_CITY" type="varchar" length="30" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_POSTALCODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_TELEPHONE" type="varchar" length="30" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_MOBILE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_FAX" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_EMAIL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_COU_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_PROVINCE_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_DISTRICT_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ELECTORATE_CODE" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_PHONE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_EXTN" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_EMAIL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PAYTYPE_FLG" type="varchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_DISPLAY_NUMBER" type="varchar" length="25" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_DISPLAY_NAME" type="varchar" length="600" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+		</table>
+		<table name="HS_HR_EMPLOYEE" row_count="837" >
+			<column name="EMP_NUMBER" type="varchar" length="8" decimal="0" jt="12" mandatory="y" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CALLING_NAME" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MIDDLE_INI" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_SURNAME" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TITLE" type="varchar" length="10" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MAIDEN_NAME" type="varchar" length="70" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NAMES_BY_INI" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_FULLNAME" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OTHER_NAMES" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NIC_NO" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NIC_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_BIRTHDAY" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_BIRTHPLACE" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_GENDER" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_BLOOD_GROUP" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="NAT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="RLG_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MARITAL_STATUS" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_MARRIED_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_DATE_JOINED" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONFIRM_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_RETIRE_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="CT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="DSG_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_WORKHOURS" type="real" length="24" decimal="0" jt="7" />
+			<column name="EMP_JOB_PREFERENCE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="CENTRE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CONTARCT_START_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="CAT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TYPE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CONTRACT_END_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONT_TO_PERM_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_CONT_TO_PERM_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_ACTIVE_HRM_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_ACTIVE_PAYROLL_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_ACTIVE_ATT_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_PAYROLLNO" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_BARCODENO" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PAYTYPE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="LOC_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TAXONTAX_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_TAX_ID_NUMBER" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_EPF_ELIGIBLE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_EPF_NUMBER" type="varchar" length="25" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PAYE_TAX_EXEMPT" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_EPF_EMPLOYEE_AMOUNT" type="decimal" length="15" decimal="2" jt="3" />
+			<column name="EMP_EPF_PAYMENT_TYPE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_EPF_EMPLOYER_AMOUNT" type="decimal" length="15" decimal="2" jt="3" />
+			<column name="EMP_ETF_ELIGIBLE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_ETF_NUMBER" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ETF_EMPLOYEE_AMOUNT" type="decimal" length="15" decimal="2" jt="3" />
+			<column name="EMP_ETF_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_MSPS_ELIGIBLE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EMP_MSPS_EMPLOYEE_AMOUNT" type="decimal" length="15" decimal="2" jt="3" />
+			<column name="EMP_MSPS_EMPLOYER_AMOUNT" type="decimal" length="15" decimal="2" jt="3" />
+			<column name="EMP_PER_ADDRESS1" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_ADDRESS2" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_ADDRESS3" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_CITY" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_POSTALCODE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_TELEPHONE" type="varchar" length="30" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_MOBILE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_FAX" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_EMAIL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_COU_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_PROVINCE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_DISTRICT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ADDRESS1" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ADDRESS2" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_ELECTORATE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ADDRESS3" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_CITY" type="varchar" length="90" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_POSTALCODE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_TELEPHONE" type="varchar" length="30" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_MOBILE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_FAX" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_EMAIL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_PHONE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_EXTN" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_PROVINCE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_COU_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_EMAIL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_ELECTORATE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_DISTRICT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="STAFFCAT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_RESIGN_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_PREF_WORK_STATION" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="SAL_GRD_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_CONFIRM_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_NXT_INC_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_DISPLAY_NAME" type="varchar" length="600" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="GP_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ORDINANCECODE_FLG" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EMP_DIVOCE_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_COR_ADDRESS_FLG" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EMP_DISPLAY_NUMBER" type="varchar" length="25" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_DATE_JOINED_GROUP" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_USER_ID" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="OPE_ID" type="int" length="10" decimal="0" jt="4" />
+			<column name="RAC_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="JSHIS_ID_LEAVE_ENT" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="EMP_OFFICE_EMAIL_LOTUS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_OFFICE_MOBILE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="NICCOLOR_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_NIC_ISSUEPLACE" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="RESIGN_TYPE_ID" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_IS_REHIRE_FLG" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EMP_PREV_EMP_NUMBER" type="varchar" length="8" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_SURNAME_LNG" type="nvarchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_FULL_ADDRESS_LNG" type="nvarchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_FULL_ADDRESS" type="varchar" length="400" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_FULL_ADDRESS_LNG" type="nvarchar" length="400" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_FULL_ADDRESS" type="varchar" length="400" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_DSDIV_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_PER_GNDIV_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_DSDIV_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TEM_GNDIV_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_DATE_FOR_CONFIRM" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_BLOG" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TWITTER" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_LINKEDIN" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_SKYPE_ID" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_FACEBOOK_LINK" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_REASON_FOR_RESIGN" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="JSHIS_ID_INVLD_BRK" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="JSHIS_ID_MISS_ATT_SUP" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="JSHIS_ID_ATT_WF" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="SUB_LOC_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="WORK_PROVINCE_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="PREF_LOC_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="PREF_SUB_LOC_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_POS_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="LGP_CODE" type="varchar" length="5" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="FUNCTION_ROLE_ID" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_TAX_MSPS_NUMBER" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_1" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_2" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_3" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_4" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_5" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_6" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_7" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_8" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_9" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_10" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_11" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_12" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_13" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_14" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="HIE_CODE_15" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="IS_EMP_ESN_SYNC" type="varchar" length="8" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="ESN_EMP_SUMMARY" type="nvarchar" length="2000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="ESN_EMP_DPT" type="nvarchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="ESN_EMP_LOCATION" type="nvarchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="ESN_EMP_SIG_OTHER" type="nvarchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="ESN_IS_DOB_PUBLIC" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="JSHIS_ID_WELCOME_MOBILE" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="JSHIS_AD_CREATED" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_ABSORPTION_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_PARTITION_HIE_CODE" type="char" length="3" decimal="0" jt="1" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EMP_INSERT_REQUEST_ID" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="EMP_UPDATE_REQUEST_ID" type="numeric" length="18" decimal="0" jt="2" />
+			<column name="PER_CITY_CODE" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="RES_CITY_CODE" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="PER_POSTAL_CODE_ID" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="RES_POSTAL_CODE_ID" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="AIRPORT_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="PERIOD_CODE" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="TICKET_COUNT" type="int" length="10" decimal="0" jt="4" />
+			<index name="PK__HS_HR_EM__B51CBE222A7B2CB6" unique="PRIMARY_KEY" >
+				<column name="EMP_NUMBER" />
+			</index>
+			<index name="IN_HIE_CODE_1" unique="NORMAL" >
+				<column name="HIE_CODE_1" />
+			</index>
+			<index name="IN_HIE_CODE_10" unique="NORMAL" >
+				<column name="HIE_CODE_10" />
+			</index>
+			<index name="IN_HIE_CODE_11" unique="NORMAL" >
+				<column name="HIE_CODE_11" />
+			</index>
+			<index name="IN_HIE_CODE_12" unique="NORMAL" >
+				<column name="HIE_CODE_12" />
+			</index>
+			<index name="IN_HIE_CODE_13" unique="NORMAL" >
+				<column name="HIE_CODE_13" />
+			</index>
+			<index name="IN_HIE_CODE_14" unique="NORMAL" >
+				<column name="HIE_CODE_14" />
+			</index>
+			<index name="IN_HIE_CODE_15" unique="NORMAL" >
+				<column name="HIE_CODE_15" />
+			</index>
+			<index name="IN_HIE_CODE_2" unique="NORMAL" >
+				<column name="HIE_CODE_2" />
+			</index>
+			<index name="IN_HIE_CODE_3" unique="NORMAL" >
+				<column name="HIE_CODE_3" />
+			</index>
+			<index name="IN_HIE_CODE_4" unique="NORMAL" >
+				<column name="HIE_CODE_4" />
+			</index>
+			<index name="IN_HIE_CODE_5" unique="NORMAL" >
+				<column name="HIE_CODE_5" />
+			</index>
+			<index name="IN_HIE_CODE_6" unique="NORMAL" >
+				<column name="HIE_CODE_6" />
+			</index>
+			<index name="IN_HIE_CODE_7" unique="NORMAL" >
+				<column name="HIE_CODE_7" />
+			</index>
+			<index name="IN_HIE_CODE_8" unique="NORMAL" >
+				<column name="HIE_CODE_8" />
+			</index>
+			<index name="IN_HIE_CODE_9" unique="NORMAL" >
+				<column name="HIE_CODE_9" />
+			</index>
+			<index name="XIF10HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_PER_COU_CODE" />
+			</index>
+			<index name="XIF11HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_PER_PROVINCE_CODE" />
+			</index>
+			<index name="XIF12HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_PER_DISTRICT_CODE" />
+			</index>
+			<index name="XIF13HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_PER_ELECTORATE_CODE" />
+			</index>
+			<index name="XIF14HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_TEM_COU_CODE" />
+			</index>
+			<index name="XIF15HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_TEM_PROVINCE_CODE" />
+			</index>
+			<index name="XIF16HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_TEM_DISTRICT_CODE" />
+			</index>
+			<index name="XIF17HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_TEM_ELECTORATE_CODE" />
+			</index>
+			<index name="XIF18HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="STAFFCAT_CODE" />
+			</index>
+			<index name="XIF19HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_PREF_WORK_STATION" />
+			</index>
+			<index name="XIF1HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="NAT_CODE" />
+			</index>
+			<index name="XIF20HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="SAL_GRD_CODE" />
+			</index>
+			<index name="XIF21HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_TYPE" />
+			</index>
+			<index name="XIF22HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="GP_CODE" />
+			</index>
+			<index name="XIF23HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_TITLE" />
+			</index>
+			<index name="XIF24HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="OPE_ID" />
+			</index>
+			<index name="XIF25HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_BARCODENO" />
+			</index>
+			<index name="XIF26HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_GENDER" />
+			</index>
+			<index name="XIF27HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="RAC_CODE" />
+			</index>
+			<index name="XIF28HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_MARITAL_STATUS" />
+			</index>
+			<index name="XIF29HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="EMP_BLOOD_GROUP" />
+			</index>
+			<index name="XIF2HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="RLG_CODE" />
+			</index>
+			<index name="XIF5HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="CT_CODE" />
+			</index>
+			<index name="XIF6HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="DSG_CODE" />
+			</index>
+			<index name="XIF7HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="CENTRE_CODE" />
+			</index>
+			<index name="XIF8HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="CAT_CODE" />
+			</index>
+			<index name="XIF9HS_HR_EMPLOYEE" unique="NORMAL" >
+				<column name="LOC_CODE" />
+			</index>
+			<fk name="FK__HS_HR_EMP__EMP_P__7F6BDA51" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_HR_EMPLOYEE" >
+				<fk_column name="EMP_PREV_EMP_NUMBER" pk="EMP_NUMBER" />
+			</fk>
+		</table>
+		<table name="HS_HR_EMP_EMERGENCY_DI" >
+			<column name="EMP_NUMBER" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_CONT_PER_FULLNAME" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_RELATIONSHIP" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_PER_ADDRESS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_OFFICE_TELEPHONE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_RES_TELEPHONE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_MOBILE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_CONTACT_TYPE_FLG" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_OFFICIAL_ADDRESS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_EMP_NUMBER" type="varchar" length="8" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EEMERG_TEL_EXT" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+		</table>
+		<table name="HS_HR_EMP_RELATIONINFO_DI" >
+			<column name="EMP_NUMBER" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_RELATIONFULLNAME" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_RELATIONSHIP" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_SEX_FLG" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_BIRTHDAY" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EREL_TELEPHONE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_ENTMEDICALBENIFIT_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_WORK_SAME_COMP_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_EDU_CENTRE" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_HOUSE_ADDRESS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_OFFICE_ADDRESS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_PF_RATIO" type="decimal" length="5" decimal="2" jt="3" />
+			<column name="EREL_PF_NOMINEE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_ENTDEATHDONATION_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_LIVINGORNOT_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_NIC_NUMBER" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_SPOUSE_TELEPHONE" type="varchar" length="20" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_COMMENTS" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="EREL_IS_MARRIED" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EREL_IS_WORKING" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EREL_EMP_NUMBER" type="varchar" length="6" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+		</table>
+		<table name="HS_HR_IA_BANK_UPLOAD" prior="HS_DB_UPLOAD_EMPBANK_0" >
+			<column name="EMP_NUMBER" prior="Employee_No" type="varchar" length="6" jt="12" />
+			<column name="BANK_CODE" prior="Bank_Code" type="varchar" length="8" jt="12" />
+			<column name="BANK_NAME" prior="Bank_Name" type="varchar" length="100" jt="12" />
+			<column name="BRANCH_CODE" prior="BBRANCH_CODE" type="varchar" length="6" jt="12" />
+			<column name="EBANK_ACC_NO" prior="Account_No" type="varchar" length="80" jt="12" />
+			<column name="ACCTYPE_ID" prior="Account_Type" type="numeric" length="3" decimal="0" jt="2" />
+			<column name="CURRENCY_SYMBOL" prior="Currency_Type" type="varchar" length="20" jt="12" />
+		</table>
+		<table name="HS_HR_IA_DASHBOARD_INFO" prior="HS_HR_IA_DASHBOARD_DETAIL" >
+			<column name="MODULE_ID" type="int" length="6" jt="4" mandatory="y" />
+			<column name="SUBSECTION_ID" prior="SUBMODULE_ID" type="nvarchar" length="6" jt="12" mandatory="y" />
+			<column name="APPROVAL_STATUS" type="varchar" length="50" jt="12" />
+			<column name="APPROVAL_BY" type="nvarchar" length="6" jt="12" />
+			<column name="APPROVAL_COMMENT" type="varchar" length="500" jt="12" />
+			<column name="APPROVAL_SIGNATURE" type="varchar" length="200" jt="12" />
+			<column name="APPROVAL_DATE" type="date" jt="91" />
+			<fk name="fk_hs_hr_ia_dashboard_detail_submodule_id" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_HR_IA_SUBSECTIONS" >
+				<fk_column name="SUBSECTION_ID" pk="SUBSECTION_ID" />
+			</fk>
+			<fk name="fk_hs_hr_ia_dashboard_info" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_MODULE" >
+				<fk_column name="MODULE_ID" pk="MODULE_ID" />
+			</fk>
+		</table>
+		<table name="HS_HR_IA_DEPINFO_UPLOAD" prior="HS_HR_EMP_RELATIONINFO_DI_0" >
+			<column name="EMP_NUMBER" type="varchar" length="6" jt="12" />
+			<column name="EREL_RELATIONFULLNAME" type="varchar" length="200" jt="12" />
+			<column name="EREL_RELATIONSHIP" type="varchar" length="20" jt="12" />
+			<column name="EREL_GENDER" prior="EREL_SEX_FLG" type="varchar" length="100" jt="12" />
+			<column name="EREL_BIRTHDAY" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EREL_TELEPHONE" type="varchar" length="20" jt="12" />
+			<column name="EREL_ENTMEDICALBENIFIT_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_WORK_SAME_COMP_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_EDU_CENTRE" type="varchar" length="100" jt="12" />
+			<column name="EREL_HOUSE_ADDRESS" type="varchar" length="200" jt="12" />
+			<column name="EREL_OFFICE_ADDRESS" type="varchar" length="200" jt="12" />
+			<column name="EREL_PF_RATIO" type="decimal" length="5" decimal="2" jt="3" />
+			<column name="EREL_PF_NOMINEE_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_ENTDEATHDONATION_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_LIVINGORNOT_FLG" type="smallint" length="5" decimal="0" jt="5" />
+			<column name="EREL_NIC_NUMBER" type="varchar" length="20" jt="12" />
+			<column name="EREL_SPOUSE_TELEPHONE" type="varchar" length="20" jt="12" />
+			<column name="EREL_COMMENTS" type="varchar" length="200" jt="12" />
+			<column name="EREL_IS_MARRIED" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EREL_IS_WORKING" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="EREL_EMP_NUMBER" type="varchar" length="6" jt="12" />
+		</table>
+		<table name="HS_HR_IA_EC_UPLOAD" prior="HS_HR_IA_EI_UPLOAD" >
+			<column name="EMP_NUMBER" type="varchar" length="6" jt="12" />
+			<column name="EC_CONT_PER_FULLNAME" prior="EI_CONT_PER_FULLNAME" type="varchar" length="200" jt="12" />
+			<column name="EC_RELATIONSHIP" prior="EI_RELATIONSHIP" type="varchar" length="50" jt="12" />
+			<column name="EC_PER_ADDRESS" prior="EI_PER_ADDRESS" type="varchar" length="200" jt="12" />
+			<column name="EC_OFFICE_TELEPHONE" prior="EI_OFFICE_TELEPHONE" type="varchar" length="20" jt="12" />
+			<column name="EC_RES_TELEPHONE" prior="EI_RES_TELEPHONE" type="varchar" length="20" jt="12" />
+			<column name="EC_MOBILE" prior="EI_MOBILE" type="varchar" length="20" jt="12" />
+			<column name="EC_CONTACT_TYPE_FLG" prior="EI_CONTACT_TYPE_FLG" type="varchar" length="20" jt="12" />
+			<column name="EC_OFFICIAL_ADDRESS" prior="EI_OFFICIAL_ADDRESS" type="varchar" length="200" jt="12" />
+			<column name="EC_EMP_NUMBER" prior="EI_EMP_NUMBER" type="varchar" length="8" jt="12" >
+				<comment><![CDATA[Internal Employee Contact]]></comment>
+			</column>
+			<column name="EC_TEL_EXT" prior="EI_TEL_EXT" type="varchar" length="20" jt="12" >
+				<comment><![CDATA[Internal Telephone Extension]]></comment>
+			</column>
+		</table>
+		<table name="HS_HR_IA_EMPLOYEE_UPLOAD" prior="HS_DI_UPLOAD_EMPLOYEE_0" >
+			<column name="EMP_NUMBER" type="varchar" length="6" jt="12" />
+			<column name="EMP_TITLE" type="varchar" length="10" jt="12" />
+			<column name="EMP_CALLING_NAME" type="varchar" length="50" jt="12" />
+			<column name="EMP_SURNAME" type="varchar" length="50" jt="12" />
+			<column name="EMP_MIDDLE_INI" type="varchar" length="50" jt="12" />
+			<column name="EMP_NAMES_BY_INI" type="varchar" length="200" jt="12" />
+			<column name="EMP_FULLNAME" type="varchar" length="200" jt="12" />
+			<column name="EMP_NIC_NO" type="varchar" length="20" jt="12" />
+			<column name="EMP_BIRTHDAY" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_GENDER" type="varchar" length="200" jt="12" />
+			<column name="EMP_MAIDEN_NAME" type="varchar" length="70" jt="12" />
+			<column name="EMP_OTHER_NAMES" type="varchar" length="200" jt="12" />
+			<column name="EMP_EPF_NUMBER" type="varchar" length="25" jt="12" />
+			<column name="EMP_NIC_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_BIRTHPLACE" type="varchar" length="200" jt="12" />
+			<column name="NATIONALITY" prior="NAT_CODE" type="varchar" length="200" jt="12" />
+			<column name="RELIGION" prior="RLG_CODE" type="varchar" length="200" jt="12" />
+			<column name="EMP_BLOOD_GROUP" type="varchar" length="20" jt="12" />
+			<column name="EMP_MARITAL_STATUS" type="varchar" length="200" jt="12" />
+			<column name="EMP_MARRIED_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_DIVOCE_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="SAL_GRD" prior="SAL_GRD_CODE" type="varchar" length="200" jt="12" />
+			<column name="CORPORATE_TITLE" prior="CT_CODE" type="varchar" length="500" jt="12" />
+			<column name="DESIGNATION" prior="DSG_CODE" type="varchar" length="200" jt="12" />
+			<column name="COST_CENTRE" prior="CENTRE_CODE" type="varchar" length="200" jt="12" />
+			<column name="EMP_DATE_JOINED" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_TYPE" type="varchar" length="200" jt="12" />
+			<column name="STAFFCAT_CLASS" prior="STAFFCAT_CODE" type="varchar" length="200" jt="12" />
+			<column name="EMP_BARCODENO" type="varchar" length="200" jt="12" />
+			<column name="EMP_PAYROLLNO" type="varchar" length="200" jt="12" />
+			<column name="EMP_ACTIVE_HRM_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_ACTIVE_PAYROLL_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_ACTIVE_ATT_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_CONFIRM_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_CONFIRM_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_DATE_FOR_CONFIRM" type="datetime" jt="92" />
+			<column name="EMP_RESIGN_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_RETIRE_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_WORKHOURS" type="varchar" length="50" jt="12" />
+			<column name="LOCATION" prior="LOC_CODE" type="varchar" length="500" jt="12" />
+			<column name="SUB_LOCATION" prior="SUB_LOC_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_CONTRACT_START_DATE" prior="EMP_CONTARCT_START_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONTRACT_END_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_CONT_TO_PERM_DATE" prior="EMP_CONT_TO_PERM_FLG" type="datetime" length="2000" jt="92" />
+			<column name="EMP_CATEGORY" prior="CAT_CODE" type="varchar" length="200" jt="12" />
+			<column name="RECR_COMPANY" prior="REC_COMPANY" type="varchar" length="500" jt="12" />
+			<column name="EMP_GROUP" prior="GP_CODE" type="varchar" length="200" jt="12" />
+			<column name="HIE_LEVEL_1" prior="HIE_CODE_1" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_2" prior="HIE_CODE_2" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_3" prior="HIE_CODE_3" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_4" prior="HIE_CODE_4" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_5" prior="HIE_CODE_5" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_6" prior="HIE_CODE_6" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_7" prior="HIE_CODE_7" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_8" prior="HIE_CODE_8" type="varchar" length="500" jt="12" />
+			<column name="HIE_LEVEL_9" prior="HIE_CODE_9" type="varchar" length="500" jt="12" />
+			<column name="EMP_TAXONTAX_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_TAX_ID_NUMBER" type="varchar" length="20" jt="12" />
+			<column name="EMP_EPF_ELIGIBLE_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_EPF_EMPLOYEE_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_EPF_EMPLOYER_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_ETF_ELIGIBLE_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_ETF_NUMBER" type="varchar" length="20" jt="12" />
+			<column name="EMP_ETF_EMPLOYEE_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_ETF_DATE" type="datetime" length="23" decimal="3" jt="92" />
+			<column name="EMP_MSPS_ELIGIBLE_FLG" type="varchar" length="200" jt="12" />
+			<column name="EMP_MSPS_EMPLOYER_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_MSPS_EMPLOYEE_AMOUNT" type="decimal" length="9" decimal="0" jt="3" />
+			<column name="EMP_PER_ADDRESS1" type="varchar" length="200" jt="12" mandatory="y" />
+			<column name="EMP_PER_ADDRESS2" type="varchar" length="200" jt="12" />
+			<column name="EMP_PER_ADDRESS3" type="varchar" length="200" jt="12" />
+			<column name="EMP_PER_CITY" type="varchar" length="200" jt="12" />
+			<column name="EMP_PER_TELEPHONE" type="varchar" length="30" jt="12" />
+			<column name="EMP_PER_MOBILE" type="varchar" length="20" jt="12" />
+			<column name="EMP_PER_FAX" type="varchar" length="20" jt="12" />
+			<column name="EMP_PER_EMAIL" type="varchar" length="200" jt="12" />
+			<column name="EMP_PER_COUNTRY" prior="EMP_PER_COU_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_PER_PROVINCE" prior="EMP_PER_PROVINCE_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_PER_DISTRICT" prior="EMP_PER_DISTRICT_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_PER_ELECTORATE_CODE" type="varchar" length="6" jt="12" />
+			<column name="EMP_TEM_ADDRESS1" type="varchar" length="200" jt="12" />
+			<column name="EMP_TEM_ADDRESS2" type="varchar" length="200" jt="12" />
+			<column name="EMP_TEM_ADDRESS3" type="varchar" length="200" jt="12" />
+			<column name="EMP_TEM_CITY" type="varchar" length="200" jt="12" />
+			<column name="EMP_TEM_POSTALCODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_TEM_TELEPHONE" type="varchar" length="30" jt="12" />
+			<column name="EMP_TEM_MOBILE" type="varchar" length="20" jt="12" />
+			<column name="EMP_TEM_FAX" type="varchar" length="20" jt="12" />
+			<column name="EMP_TEM_EMAIL" type="varchar" length="100" jt="12" />
+			<column name="EMP_TEM_COUNTRY" prior="EMP_TEM_COU_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_TEM_PROVINCE" prior="EMP_TEM_PROVINCE_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_TEM_DISTRICT" prior="EMP_TEM_DISTRICT_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_TEM_ELECTORATE" prior="EMP_TEM_ELECTORATE_CODE" type="varchar" length="500" jt="12" />
+			<column name="EMP_OFFICE_EMAIL" type="varchar" length="100" jt="12" />
+			<column name="EMP_OFFICE_EXTN" type="varchar" length="20" jt="12" />
+			<column name="EMP_OFFICE_PHONE" type="varchar" length="20" jt="12" />
+		</table>
+		<table name="HS_HR_IA_ERRORS" >
+			<column name="ERROR_ID" type="int" jt="4" mandatory="y" >
+				<identity><![CDATA[IDENTITY(1,1)]]></identity>
+			</column>
+			<column name="TEMPLATE_ID" type="nvarchar" length="6" jt="12" />
+			<column name="EMP_NUMBER" type="varchar" length="6" jt="12" />
+			<column name="ERROR_DETAILS" type="varchar" length="2000" jt="12" />
+			<column name="COL_NUMBERS" type="varchar" length="1000" jt="12" />
+			<column name="ROW_NUMBER" type="varchar" length="20" jt="12" />
+			<index name="pk_HS_HR_IA_ERRORS" unique="PRIMARY_KEY" >
+				<column name="ERROR_ID" />
+			</index>
+			<fk name="fk_hs_hr_ia_errors" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_HR_IA_TEMPLATES" >
+				<fk_column name="TEMPLATE_ID" pk="TEMPLATE_ID" />
+			</fk>
+		</table>
+		<table name="HS_HR_IA_MODULES" >
+			<column name="MODULE_ID" type="nvarchar" length="6" jt="12" mandatory="y" />
+			<column name="MODULE_NAME" type="varchar" length="150" jt="12" />
+			<index name="pk_HS_HR_IA_MODULES" unique="PRIMARY_KEY" >
+				<column name="MODULE_ID" />
+			</index>
+		</table>
+		<table name="HS_HR_IA_RH_UPLOAD" prior="HS_HR_IA_RH_UPLOA" >
+			<column name="EMP_NUMBER" type="varchar" length="6" jt="12" />
+			<column name="DIRECT_SUPERVISOR_NUMBER" prior="COMPANY" type="varchar" length="6" jt="12" />
+			<column name="COMPANY" type="varchar" length="100" jt="12" />
+			<column name="INDIRECT_SUPERVISOR_NUMBER" type="varchar" length="6" jt="12" />
+		</table>
+		<table name="HS_HR_IA_SUBSECTIONS" prior="HS_HR_IA_SUBMODULES" spec="" >
+			<column name="SUBSECTION_ID" prior="SUBMODULE_ID" type="nvarchar" length="6" jt="12" mandatory="y" />
+			<column name="MODULE_ID" type="int" jt="4" />
+			<column name="SUBSECTION_NAME" prior="SUBMODULE_NAME" type="varchar" length="150" jt="12" />
+			<index name="pk_HS_HR_IA_SUBMODULES" unique="PRIMARY_KEY" >
+				<column name="SUBSECTION_ID" />
+			</index>
+			<fk name="fk_hs_hr_ia_submodules" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_MODULE" >
+				<fk_column name="MODULE_ID" pk="MODULE_ID" />
+			</fk>
+		</table>
+		<table name="HS_HR_IA_TEMPLATES" >
+			<column name="TEMPLATE_ID" type="nvarchar" length="6" jt="12" mandatory="y" />
+			<column name="MODULE_ID" type="int" jt="4" />
+			<column name="SUBSECTION_ID" prior="SUBMODULE_ID" type="nvarchar" length="6" jt="12" />
+			<column name="TEMPLATE_NAME" type="varchar" length="200" jt="12" />
+			<column name="TEMPLATE_DATA" type="varbinary(max)" length="5000" jt="-3" />
+			<column name="IS_ACTIVE_FLG" type="bit" jt="-7" />
+			<index name="pk_HS_HR_IA_TEMPLATES" unique="PRIMARY_KEY" >
+				<column name="TEMPLATE_ID" />
+			</index>
+			<fk name="fk_hs_hr_ia_templates_submodule_id" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_HR_IA_SUBSECTIONS" >
+				<fk_column name="SUBSECTION_ID" pk="SUBSECTION_ID" />
+			</fk>
+			<fk name="fk_hs_hr_ia_templates" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_MODULE" >
+				<fk_column name="MODULE_ID" pk="MODULE_ID" />
+			</fk>
+		</table>
+		<table name="HS_HR_IA_TEMPLATE_INFO" prior="HS_HR_IA_TEMPLATE_DETAILS" >
+			<column name="TEMPLATE_ID" type="nvarchar" length="6" jt="12" />
+			<column name="COL_DBNAME" prior="COLUMN_DBNAME" type="varchar" length="100" jt="12" />
+			<column name="COL_EXCELNAME" prior="COLUMN_EXCELNAME" type="varchar" length="200" jt="12" />
+			<fk name="fk_hs_hr_ia_template_details_template_id" to_schema="QADBV9_L2.QADBV9_L2" to_table="HS_HR_IA_TEMPLATES" >
+				<fk_column name="TEMPLATE_ID" pk="TEMPLATE_ID" />
+			</fk>
+		</table>
+		<table name="HS_HR_IA_USERS" >
+			<column name="USER_ID" type="nvarchar" length="20" jt="12" mandatory="y" />
+			<column name="PASSWORD" type="nvarchar" length="150" jt="12" />
+			<column name="USERNAME" type="varchar" length="100" jt="12" />
+			<column name="USER_ISACTIVE" type="bit" jt="-7" />
+			<column name="CREATE_DATE" type="date" jt="91" />
+			<index name="pk_HS_HR_IA_USERS" unique="PRIMARY_KEY" >
+				<column name="USER_ID" />
+			</index>
+		</table>
+		<table name="HS_MODULE" >
+			<column name="MODULE_ID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MODULE_NAME" type="varchar" length="50" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="MODULE_ACTIVE" type="numeric" length="1" decimal="0" jt="2" />
+			<column name="MODULE_ORDER" type="numeric" length="5" decimal="0" jt="2" />
+			<column name="MODULE_TITLE" type="varchar" length="200" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="MODULE_DESCRIPTION" type="varchar" length="1000" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="MODULE_IMG_URL" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="MODULE_MINI_DESC" type="varchar" length="500" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="MODULE_ICON_URL" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="MODULE_ICON_CLASS" type="varchar" length="100" decimal="0" jt="12" >
+				<type_options><![CDATA[COLLATE SQL_Latin1_General_CP1_CI_AS]]></type_options>
+			</column>
+			<column name="IS_SCOPE" type="numeric" length="5" decimal="0" jt="2" />
+			<index name="PK__HS_MODUL__238A8246209949D1" unique="PRIMARY_KEY" >
+				<column name="MODULE_ID" />
+			</index>
+		</table>
+	</schema>
+	<connector name="SqlServer" database="SqlServer" driver_class="com.microsoft.sqlserver.jdbc.SQLServerDriver" driver_jar="mssql-jdbc-11.2.0.jre11.jar" driver_desc="SQL Server Authentication" host="localhost" port="1433" instance="QADBV9_L2" user="QADBV9_L2" passwd="UUFEQlY5X0wy" useSystemProxy="false" />
+	<layout name="Bank Details" id="Layout-155f" show_column_type="y" show_relation="columns" >
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_BANK_UPLOAD" color="3986C1" x="48" y="48" />
+	</layout>
+	<layout name="Dependents Information" id="Layout-7b2" show_column_type="y" show_relation="columns" >
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_DEPINFO_UPLOAD" color="3986C1" x="48" y="48" />
+	</layout>
+	<layout name="Emergency Contact" id="Layout-2291" show_column_type="y" show_relation="columns" >
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_EC_UPLOAD" color="3986C1" x="48" y="48" />
+	</layout>
+	<layout name="Employee Data" id="Layout-2595" show_column_type="y" show_relation="columns" >
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_EMPLOYEE_UPLOAD" color="3986C1" x="48" y="48" />
+	</layout>
+	<layout name="Implementation Automation" id="Layout-2007" show_column_type="y" show_relation="columns" >
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_DASHBOARD_INFO" color="C1D8EE" x="304" y="624" />
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_ERRORS" color="C1D8EE" x="576" y="416" />
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_SUBSECTIONS" color="C1D8EE" x="448" y="272" />
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_TEMPLATES" color="C1D8EE" x="48" y="384" />
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_TEMPLATE_INFO" color="C1D8EE" x="48" y="624" />
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_USERS" color="C1D8EE" x="480" y="48" />
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_MODULE" color="3986C1" x="48" y="48" />
+		<query id="Query-b93" name="HS_HR_IA_USERS" confirmed="y" >
+			<query_table schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_USERS" alias="hhiu" x="48" y="48" >
+				<column name="USER_ID" />
+				<column name="PASSWORD" />
+				<column name="USERNAME" />
+				<column name="USER_ISACTIVE" />
+				<column name="CREATE_DATE" />
+			</query_table>
+		</query>
+	</layout>
+	<layout name="Reporting Hierarchy" id="Layout-752" show_column_type="y" show_relation="columns" >
+		<entity schema="QADBV9_L2.QADBV9_L2" name="HS_HR_IA_RH_UPLOAD" color="C1D8EE" x="48" y="48" />
+	</layout>
+</project>

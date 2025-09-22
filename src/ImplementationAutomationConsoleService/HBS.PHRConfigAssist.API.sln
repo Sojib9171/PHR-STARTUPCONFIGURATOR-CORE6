@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBS.PHRConfigAssist.API", "HBS.ImplementationAutomationConsole.API\HBS.PHRConfigAssist.API.csproj", "{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E} = {D8972947-FA68-4CE3-8122-D8ADD954F51E}
+		{FAB155CA-8774-4600-BFAD-C310D1071EE8} = {FAB155CA-8774-4600-BFAD-C310D1071EE8}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBS.PHRConfigAssist.Core", "HBS.ImplementationAutomationConsole.Core\HBS.PHRConfigAssist.Core.csproj", "{D8972947-FA68-4CE3-8122-D8ADD954F51E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FAB155CA-8774-4600-BFAD-C310D1071EE8} = {FAB155CA-8774-4600-BFAD-C310D1071EE8}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteDAC", "LiteDAC\LiteDAC.csproj", "{FAB155CA-8774-4600-BFAD-C310D1071EE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBS.PHRConfigAssistTest", "HBS.PHRConfigAssistTest\HBS.PHRConfigAssistTest.csproj", "{6A408353-629C-47EF-977A-73FEC9F41B58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB155CA-8774-4600-BFAD-C310D1071EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB155CA-8774-4600-BFAD-C310D1071EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB155CA-8774-4600-BFAD-C310D1071EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB155CA-8774-4600-BFAD-C310D1071EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A408353-629C-47EF-977A-73FEC9F41B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A408353-629C-47EF-977A-73FEC9F41B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A408353-629C-47EF-977A-73FEC9F41B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A408353-629C-47EF-977A-73FEC9F41B58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F95EEF05-1B8B-4FD5-8C02-8096C4B6C43C}
+	EndGlobalSection
+EndGlobal

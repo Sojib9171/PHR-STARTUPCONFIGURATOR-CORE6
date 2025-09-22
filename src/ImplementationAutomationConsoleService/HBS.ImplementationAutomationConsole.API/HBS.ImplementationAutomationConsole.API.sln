@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBS.ImplementationAutomationConsole.API", "HBS.ImplementationAutomationConsole.API\HBS.ImplementationAutomationConsole.API.csproj", "{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E} = {D8972947-FA68-4CE3-8122-D8ADD954F51E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBS.ImplementationAutomationConsole.Core", "HBS.ImplementationAutomationConsole.Core\HBS.ImplementationAutomationConsole.Core.csproj", "{D8972947-FA68-4CE3-8122-D8ADD954F51E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F873ACA6-1C59-47C7-98AB-D2C30BEA06E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8972947-FA68-4CE3-8122-D8ADD954F51E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F95EEF05-1B8B-4FD5-8C02-8096C4B6C43C}
+	EndGlobalSection
+EndGlobal

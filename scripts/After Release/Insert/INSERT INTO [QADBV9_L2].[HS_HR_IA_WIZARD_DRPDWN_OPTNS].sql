@@ -1,0 +1,20 @@
+INSERT INTO [QADBV9_L2].[HS_HR_IA_WIZARD_DRPDWN_OPTNS](
+	[SUBSECTION_ID],
+	[MODULE_ID],
+	[QUESTION_NO],
+	[ANSWER_OPTION])
+ VALUES
+('6',14,35,'Annual'),
+('6',14,35,'Casual'),
+('6',14,36,'Annual'),
+('6',14,36,'Casual'),
+('6',14,38,'1'),
+('6',14,38,'2'),
+('6',14,46,'Annual_Leave_Sri_Lanka'),
+('6',14,46,'Carry_Forward_Sri_Lanka'),
+('6',14,46,'Casual_Leave_Sri_Lanka'),
+('6',14,46,'DefaultTimeBase'),
+('6',14,46,'Election_Leave_Sri_Lanka'),
+('6',14,46,'Maternity_Leave_Sri_Lanka'),
+('6',14,46,'Medical_Leave_Sri_Lanka'),
+('6',14,46,'Paternity_Leave_Sri_Lanka')

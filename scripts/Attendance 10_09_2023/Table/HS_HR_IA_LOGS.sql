@@ -1,0 +1,10 @@
+CREATE TABLE HS_HR_IA_ERROR_LOGS(  
+[id] [int] IDENTITY(1, 1) NOT NULL,  
+[ERROR_LINE] [int] NULL,  
+[ERROR_MESSAGE] [varchar](5000) NULL,  
+[ERROR_NUMBER] [int] NULL,  
+[ERROR_PROCEDURE] [nvarchar](128) NULL,  
+[ERROR_SEVERITY] [int] NULL,  
+[ERROR_STATE] [int] NULL,  
+[ERROR_DATE] [datetime] NULL  
+) 

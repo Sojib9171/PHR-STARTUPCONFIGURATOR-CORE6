@@ -1,0 +1,164 @@
+<template>
+  <div>
+    <div v-if="isLoading">
+      <loader />
+    </div>
+    <div v-else>
+      <div>
+        <sideBar :isDisabled="false" :allObjects="allObjects" :emiObjects="eimObjects" :absenceObjects="absenceObjects"
+          :attendanceObjects="attendanceObjects" />
+        <div class="col page-content px-0">
+          <topBar :isDisabled=false />
+          <div class="page-body">
+            <div>
+              <div class="page-title">
+                <!--Page title-->
+                <h2>{{ subsection }} Upload</h2>
+
+                <!--Breadcrumb-->
+                <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><router-link :to="{ name: 'home' }"><i
+                          class="ri-home-4-line"></i></router-link>
+                    </li>
+                    <li class="breadcrumb-item"><router-link :to="{ name: 'advance-configuration-1' }"></router-link>
+                      Advanced Configuration</li>
+                    <li class="breadcrumb-item">{{ subsection }}
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <section class="mt-3">
+              <div class="section-heading">
+                <uploadSectionHeader :subsectionName="subsection" />
+              </div>
+              <div class="section-body">
+                <excelUpload :subsectionName="subsection" @api-response="handleApiResponse" />
+              </div>
+              <div class="section-footer">
+                <templateDownload :subsectionName="subsection" />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+  
+<script>
+import SideBar from "../components/navigation/SideBar.vue";
+import TopBar from "../components/navigation/TopBar.vue";
+//import PageTitle from "../components/navigation/PageTitle.vue";
+import ExcelUpload from "../components/pageElements/ExcelUpload.vue";
+import UploadSectionHeader from "../components/pageElements/UploadSectionHeader.vue";
+import TemplateDownload from "../components/pageElements/TemplateDownload.vue";
+import PageLoader from '@/components/pageElements/PageLoader.vue';
+import { Base64 } from "js-base64";
+import { extendCookieTimeout } from '@/cookieUtils';
+import { removeAbsenceRowID } from '@/localStorageUtils';
+
+export default {
+  data() {
+    return {
+      selectedFile: null,
+      isLoading: false,
+      subsectionName: null,
+      allObjects: [],
+      eimObjects: [],
+      absenceObjects: [],
+      attendanceObjects: []
+    }
+  },
+
+  props: {
+    subsection: {
+      type: String,
+      required: true
+    }
+  },
+
+  methods: {
+    handleApiResponse() {
+      this.isLoading = true;
+    },
+
+    showLogOutAlert() {
+      this.$swal.fire({
+        position: 'top',
+        icon: 'error',
+        width: 400,
+        height: 100,
+        text: 'Your Session Has Expired',
+        timer: 5000
+      });
+    },
+  },
+
+  components: {
+    "sideBar": SideBar,
+    "topBar": TopBar,
+    //"pageTitle": PageTitle,
+    "excelUpload": ExcelUpload,
+    "uploadSectionHeader": UploadSectionHeader,
+    "templateDownload": TemplateDownload,
+    "loader": PageLoader
+  },
+
+  beforeRouteUpdate(to, from, next) {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+      next();
+    }, 300);
+  },
+
+  beforeRouteLeave(to, from, next) {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+      next();
+    }, 300);
+  },
+
+  async mounted() {
+    removeAbsenceRowID();
+    await this.$http
+      .get(
+        "/GetSidebarComponents",
+        {
+          headers: {
+            accept: "*/*",
+            Authorization:
+              "Basic " +
+              Base64.toBase64(
+                this.$cookies.get("enc") + ":" + this.$cookies.get("encVal") + ":" + this.$cookies.get("userTypeCode") + ":" + this.$cookies.get("userName") + ":" + this.$cookies.get("name")
+              ),
+          }
+        }
+      )
+      .then((resp) => {
+        this.allObjects = resp.data;
+        this.eimObjects = this.allObjects.filter(item => item.module_Id === 2);
+        this.absenceObjects = this.allObjects.filter(item => item.module_Id === 14);
+        this.attendanceObjects = this.allObjects.filter(item => item.module_Id === 65);
+        extendCookieTimeout();
+      })
+      .catch((error) => {
+        console.log(error.message);
+        if (error.response.status == 401) {
+          this.emitter.emit('loggedOut', true);
+        }
+        else if (error.response.status == 403) {
+          this.emitter.emit('accessDenied', true);
+        }
+      });
+
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 300);
+  },
+}
+</script>

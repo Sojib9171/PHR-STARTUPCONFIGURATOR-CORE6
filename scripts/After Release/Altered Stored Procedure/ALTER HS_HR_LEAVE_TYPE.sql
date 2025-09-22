@@ -1,0 +1,1 @@
+sp_help hs_hr_leave_type 

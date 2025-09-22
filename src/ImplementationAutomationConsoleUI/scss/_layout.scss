@@ -1,0 +1,127 @@
+@import "_mixins";
+@import "_typography";
+@import "_variables";
+
+.sidebar-left {
+  width: var(--sidebar-width-default);
+  left: 0;
+  top: 0;
+  @include transition;
+  z-index: 222;
+}
+
+body {
+  &.sidebar-hidden {
+    .menu-toggle {
+      background-color: var(--sidebar-bg);
+      color: var(--link-color);
+    }
+    .sidebar-left {
+      left: var(--sidebar-width-close);
+    }
+
+    .page-content {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.page-content {
+  width: calc(100% - var(--sidebar-width-default));
+  margin-left: 0;
+  @include transition;
+
+  .page-header {
+    // height: var(--header-height);
+
+    .menu-toggle {
+      padding: var(--base-padding);
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  .page-body {
+    padding: rem(20);
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-left {
+    left: 0;
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .page-content {
+    margin-left: var(--sidebar-width-default);
+  }
+
+  body {
+    &.sidebar-hidden {
+      .sidebar-left {
+        left: var(--sidebar-width-close);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    .welcome-note {
+      display: none;
+    }
+
+    &.sidebar-hidden {
+      .sidebar-toggle {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+  .sidebar-left {
+    box-shadow: 1px 2px 12px -4px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebar-toggle {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    background-color: var(--sidebar-bg);
+    width: rem(50);
+    height: rem(50);
+    top: rem(22);
+    right: rem(-22);
+    position: absolute;
+    line-height: 0;
+    z-index: -1;
+    border: 1px solid #e5e6e7;
+    box-shadow: 1px 2px 12px -4px rgba(0, 0, 0, 0.25);
+
+    .menu-btn {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      padding-left: rem(30);
+      -webkit-transition: all 0.45s ease;
+      transition: all 0.45s ease;
+    }
+  }
+}

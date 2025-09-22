@@ -1,0 +1,41 @@
+ALTER PROCEDURE [QADBV9_L2].[SP_IA_GET_TABLE_NAME]
+    @SUBSECTION varchar(200)
+AS
+BEGIN
+ IF @SUBSECTION = 'Employee Data'
+    BEGIN
+       SELECT 'HS_HR_IA_EMPLOYEE_UPLOAD'
+    END
+    ELSE IF @SUBSECTION = 'Bank Details'
+    BEGIN
+        SELECT 'HS_HR_IA_BANK_UPLOAD'
+    END
+    ELSE IF @SUBSECTION = 'Reporting Hierarchy'
+    BEGIN
+        SELECT 'HS_HR_IA_RH_UPLOAD'
+    END
+    ELSE IF @SUBSECTION = 'Dependent Information'
+    BEGIN
+        SELECT 'HS_HR_IA_DEPINFO_UPLOAD'
+    END
+	    ELSE IF @SUBSECTION = 'Emergency Contact'
+    BEGIN
+       SELECT 'HS_HR_IA_EC_UPLOAD'
+    END
+	    ELSE IF @SUBSECTION = 'Short Leave'
+    BEGIN
+       SELECT 'HS_HR_IA_SHORT_LEAVE_UPLOAD'
+    END
+		ELSE IF @SUBSECTION = 'Statutory Leave'
+    BEGIN
+       SELECT 'HS_HR_IA_STATUTRY_LEAVE_UPLOAD'
+    END
+		ELSE IF @SUBSECTION = 'Shift Information'
+    BEGIN
+       SELECT 'HS_HR_IA_SHIFT_INFO_UPLOAD'
+    END
+		ELSE IF @SUBSECTION = 'Roster Information'
+    BEGIN
+       SELECT 'HS_HR_IA_ROSTER_INFO_UPLOAD'
+    END
+END

@@ -1,0 +1,23 @@
+INSERT INTO HS_HR_IA_TEMPLATE_INFO (TEMPLATE_ID, COL_DBNAME, COL_EXCELNAME,COL_DATATYPE)
+VALUES
+	(N'temp4', N'EMP_NUMBER', N'Employee no', N'varchar'),
+	(N'temp4', N'EREL_RELATIONFULLNAME', N'Dependent Full name', N'varchar'),
+	(N'temp4', N'EREL_RELATIONSHIP', N'Relationship', N'varchar'),
+	(N'temp4', N'EREL_GENDER', N'Gender', N'varchar'),
+	(N'temp4', N'EREL_BIRTHDAY', N'Date of Birth', N'date'),
+	(N'temp4', N'EREL_TELEPHONE', N'Telephone no', N'varchar'),
+	(N'temp4', N'EREL_ENTMEDICALBENIFIT_FLG', N'Entitled for medical benefits', N'smallint'),
+	(N'temp4', N'EREL_WORK_SAME_COMP_FLG', N'Working in same company', N'smallint'),
+	(N'temp4', N'EREL_EDU_CENTRE', N'Education center', N'varchar'),
+	(N'temp4', N'EREL_HOUSE_ADDRESS', N'Home address', N'varchar'),
+	(N'temp4', N'EREL_OFFICE_ADDRESS', N'Office address', N'varchar'),
+	(N'temp4', N'EREL_PF_RATIO', N'PF ratio', N'decimal'),
+	(N'temp4', N'EREL_PF_NOMINEE_FLG', N'PF nominee', N'smallint'),
+	(N'temp4', N'EREL_ENTDEATHDONATION_FLG', N'Entitled for death donations', N'smallint'),
+	(N'temp4', N'EREL_LIVINGORNOT_FLG', N'Living', N'smallint'),
+	(N'temp4', N'EREL_NIC_NUMBER', N'NIC number', N'varchar'),
+	(N'temp4', N'EREL_SPOUSE_TELEPHONE', N'Spouse telephone no', N'varchar'),
+	(N'temp4', N'EREL_COMMENTS', N'Comments', N'varchar'),
+	(N'temp4', N'EREL_IS_MARRIED', N'Married', N'smallint'),
+	(N'temp4', N'EREL_IS_WORKING', N'Employed', N'smallint'),
+	(N'temp4', N'EREL_EMP_NUMBER', N'Employee no of the dependant (If working in the same company)', N'varchar');
