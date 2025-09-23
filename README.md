@@ -1,20 +1,21 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+PeoplesHR Startup Configurator is a modular .NET 6-based system designed to simplify the configuration, deployment, and integration of PeopleHR services with enterprise systems. It combines software engineering best practices with automation hooks, enabling scalable, secure, and maintainable solutions for HR technology.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Key Features:
+1.  Modular Architecture: Clean separation of concerns
+2.  .NET 6 Core Backend: Robust, enterprise-ready, and future-proof
+3.  Database Integration: Optimized SQL scripts and migration support
+4.	Frontend Support (Vue.js): Clean UI modules for configuration dashboards.
+5.	Unit Testing: Comprehensive test case to ensure correctness of core modules.
+6.  Extensible Design: Designed for integration with AI/ML components in HR workflows
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Technology Stack
+Technology Stack
+- **Language & Runtime**: C# with .NET 6  
+- **Frontend**: Vue.js  
+- **Database**: SQL Server (T-SQL)  
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Prerequisites
+- [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)  
+- SQL Server or any compatible database  
+- [Node.js](https://nodejs.org/) (for frontend modules)  
